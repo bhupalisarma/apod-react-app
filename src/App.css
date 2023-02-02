@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+
+body {
+  padding: 3%;
+  font-family: Arial;
+  text-align: center;
+}
+
+.home-page{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+img{
+  width: 100%;
+}
