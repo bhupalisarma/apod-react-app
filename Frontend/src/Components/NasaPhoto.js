@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { parsePath } from "react-router-dom";
 
+
+
 export default function NasaPhoto() {
   const [photoData, setPhotoData] = useState(null);
 

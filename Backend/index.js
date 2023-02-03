@@ -28,6 +28,7 @@ app.post("/login", (req, res)=> {
     User.findOne({ email: email}, (err, user) => {
         if(user){
             if(password === user.password ) {
+                console.log("User logged in")
                 res.send({message: "Login Successfull", user: user})
             } else {
                 res.send({ message: "Password didn't match"})
@@ -38,7 +39,7 @@ app.post("/login", (req, res)=> {
     })
 }) 
 
-app.post("/register", (req, res)=> {
+app.post("/signup", (req, res)=> {
     const { name, email, password} = req.body
     User.findOne({email: email}, (err, user) => {
         if(user){
@@ -62,5 +63,5 @@ app.post("/register", (req, res)=> {
 }) 
 
 app.listen(9002,() => {
-    console.log("BE started at port 9002")
+    console.log("Server started at port 9002")
 })

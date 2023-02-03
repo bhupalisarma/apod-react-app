@@ -17,8 +17,7 @@ const Signup = () => {
          if(name && email && password && (password === reEnterPassword)){
             axios.post("http://localhost:9002/signup",user)
             .then(res =>{
-                alert(res.data.messsage)
-                navigate("/login")
+                navigate("/nasaphoto")
             })
          }else{
             alert("invalid ip")
