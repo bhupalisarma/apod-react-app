@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { parsePath } from "react-router-dom";
 
 
-
 export default function NasaPhoto() {
   const [photoData, setPhotoData] = useState(null);
 
@@ -10,7 +9,7 @@ export default function NasaPhoto() {
     fetchPhoto();
     async function fetchPhoto() {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=Mc5pPqnjhk88JlUcvYswQubphubVlOZHkhCCbaa1`
+        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`
       );
       const data = await res.json();
       setPhotoData(data);
